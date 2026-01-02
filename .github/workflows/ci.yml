@@ -1,0 +1,19 @@
+name: Observability Stack CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compose config validation
+        run: docker compose config
+      - name: Smoke test stack
+        run: |
+          chmod +x scripts/smoke-test.sh
+          ./scripts/smoke-test.sh
