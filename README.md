@@ -1,6 +1,6 @@
 # Observability Docker Stack
 
-Docker Compose bundle for Prometheus, Grafana, Loki, and Promtail. It mirrors how I bootstrap observability in greenfield environments before moving workloads into managed services.
+Docker Compose bundle for Prometheus, Grafana, Loki, and Promtail. Mirrors how observability is bootstrapped in greenfield environments before workloads move into managed services.
 
 ## Components
 
