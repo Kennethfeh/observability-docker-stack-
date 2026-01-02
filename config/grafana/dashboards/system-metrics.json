@@ -1,0 +1,23 @@
+{
+  "title": "System Metrics",
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "Prometheus Targets",
+      "targets": [
+        { "expr": "sum(up)", "datasource": "Prometheus" }
+      ],
+      "gridPos": { "h": 8, "w": 24, "x": 0, "y": 0 }
+    },
+    {
+      "type": "logs",
+      "title": "Recent Logs",
+      "targets": [
+        { "expr": "{job=\"varlogs\"}", "datasource": "Loki" }
+      ],
+      "gridPos": { "h": 10, "w": 24, "x": 0, "y": 8 }
+    }
+  ],
+  "schemaVersion": 37,
+  "version": 1
+}
